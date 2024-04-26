@@ -1,0 +1,50 @@
+class Book:
+    def __init__(self, title, author, isbn):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+    
+    def set_title(self, title):
+        self.title = title
+    
+    def get_title(self):
+        return self.title
+    
+    def set_author(self, author):
+        self.author = author
+    
+    def get_author(self):
+        return self.author
+    
+    def set_isbn(self, isbn):
+        self.isbn = isbn
+    
+    def get_isbn(self):
+        return self.isbn
+    
+if __name__ == "__main__":
+    # Creating a list to store book instances
+    book_collection = []
+    while True:
+        # Adding books to the collection using user input
+        title = input("Enter the title of the book: ")
+        author = input("Enter the author of the book: ")
+        isbn = input("Enter the ISBN of the book: ")
+
+        # Creating a Book instance and adding it to the collection
+        book = Book(title, author, isbn)
+        book_collection.append(book)
+
+        # Check if user wants to add more books
+        add_more = input("Do you want to add another book? (yes/no): ")
+        if add_more not in ["y","Y"]:
+            break
+
+    # Retrieving and displaying books from the collection
+    print("Book Collection:")
+    for index, book in enumerate(book_collection, start=1):
+        print(f"Book {index}:")
+        print(f"Title: {book.get_title()}")
+        print(f"Author: {book.get_author()}")
+        print(f"ISBN: {book.get_isbn()}")
+        print()
