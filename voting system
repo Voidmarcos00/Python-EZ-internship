@@ -1,0 +1,41 @@
+class Candidate:
+    def __init__(self, name):
+        self.name = name
+        self.vote_count = 0
+    
+    def increment_vote(self):
+        self.vote_count += 1
+    
+    def get_name(self):
+        return self.name
+    
+    def get_vote_count(self):
+        return self.vote_count
+
+if __name__ == "__main__":
+    # Creating candidates
+  candidates = [Candidate("RAHUL"), Candidate("PRIYA"), Candidate("ROHAN")]
+    invalid_vote = 0
+
+    # Simulating voting
+    print("****** Total Number of Votes: 10 ******")
+    print("Candidate A : RAHUL\nCandidate B: PRIYA\nCandidate C: ROHAN")
+    for i in range(10):
+        
+        vote = input("Cast your vote: ")
+        if vote == 'A':
+            candidates[0].increment_vote()
+        elif vote == 'B':
+            candidates[1].increment_vote()
+        elif vote == 'C':
+            candidates[2].increment_vote()
+        else:
+            print("Invalid vote")
+            invalid_vote += 1
+
+    # Displaying results
+    print("\nElection Results:")
+    for candidate in candidates:
+        print(f"{candidate.get_name()}: {candidate.get_vote_count()} votes")
+    if invalid_vote > 0:
+        print(f"Invalid Votes: {invalid_vote} votes")
