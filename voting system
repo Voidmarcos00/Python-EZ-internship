@@ -14,12 +14,12 @@ class Candidate:
 
 if __name__ == "__main__":
     # Creating candidates
-  candidates = [Candidate("RAHUL"), Candidate("PRIYA"), Candidate("ROHAN")]
+  candidates = [Candidate("RAHUL"), Candidate("PRIYA"), Candidate("ABHISHEK")]
     invalid_vote = 0
 
     # Simulating voting
     print("****** Total Number of Votes: 10 ******")
-    print("Candidate A : RAHUL\nCandidate B: PRIYA\nCandidate C: ROHAN")
+    print("Candidate A : RAHUL\nCandidate B: PRIYA\nCandidate C: ABHISHEK")
     for i in range(10):
         
         vote = input("Cast your vote: ")
