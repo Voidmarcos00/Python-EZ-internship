@@ -1,0 +1,18 @@
+class TemperatureConverter:
+    
+    def c_to_f(celsius):                      #celsius_to_fahrenheit
+        return celsius * 9/5 + 32             #Formula: F = C * 9/5 + 32
+
+    
+    def f_to_c(fahrenheit):                   #fahrenheit_to_celsius
+        return (fahrenheit - 32) * 5/9        #Formula: C = (F - 32) * 5/9
+
+
+c_temp = float(input("Enter temperature in Celsius: "))
+f_temp = float(input("Enter temperature in Fahrenheit: "))
+
+
+print(f"{c_temp}°C is equal to {TemperatureConverter.c_to_f(c_temp)}°F")
+
+
+print(f"{f_temp}°F is equal to {TemperatureConverter.f_to_c(f_temp)}°C")
